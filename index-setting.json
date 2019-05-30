@@ -1,0 +1,62 @@
+{
+  "id": "frame",
+  "mqtt": {
+    "url": "mqtt://localhost:1883",
+    "options": {
+      "qos": 0,
+      "retain": true
+    }
+  },
+  "web": {
+    "address": "0.0.0.0",
+    "port": 9658,
+    "env": "development",
+    "crossdomain": false,
+    "limit": "500mb",
+    "secret": "pu",
+    "maxAge": 604800000,
+    "urls": {
+      "views": "./app/views",
+      "favicon": "./public/favicon.ico",
+      "static": "./public",
+      "style": "./app/styles",
+      "scripts": "./app/scripts",
+      "lib": "../clc.share/lib",
+      "upload": "../clc.share/upload",
+      "userImage": "../clc.share/upload/img/users"
+    },
+    "httpSchema": "http"
+  },
+  "routes": {
+    "login": "http://localhost:7200/login",
+    "api": "clc/api/v1"
+  },
+  "daemon": {
+    "id": "daemon-frame",
+    "heartbeat": 900000,
+    "domain": "sample-values",
+    "monitoringUnit": "daemon-unit",
+    "sampleUnit": "frame-services",
+    "channel": "frame",
+    "value": {
+      "url": "http://localhost/frame"
+    }
+  },
+  "options": {
+    "logFile": "/log/frame.log",
+    "simplePassword": false
+  },
+  "register": {
+    "topic": "gateway/register",
+    "throttle": 1000,
+    "frame": {
+      "id": "register-frame",
+      "filename": "./app/scripts/frame/setting.json"
+    }
+  },
+  "services": {
+    "auth": {
+      "token": "fa5d09d0-af61-11e8-acd7-937b5970daac"
+    }
+  }
+}

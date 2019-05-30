@@ -1,0 +1,72 @@
+menu .menu-header-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 36%;
+  height: 48px;
+  text-align: center;
+}
+menu .menu-header-logo img {
+  width: 1.2rem;
+}
+menu .no-arrow .collapsible-header:after {
+  content: "" !important;
+}
+menu .menu .collapsible-header:after {
+  font-family: "Material Icons";
+  content: "keyboard_arrow_left";
+  color: #e2edf2;
+  font-size: 18px;
+  position: absolute;
+  right: 44px;
+  transition: 0.3s;
+}
+menu .menu .active .collapsible-header:after {
+  content: "keyboard_arrow_down";
+  transition: 0.3s;
+}
+menu span {
+  color: #e2edf2;
+}
+menu .no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+menu .sidenav {
+  top: 64px;
+  width: 240px;
+  background-color: rgba(26, 69, 162, 0.4);
+  height: calc(100% - 32px);
+}
+menu .sidenav .collapsible-header, menu .sidenav .fixed .collapsible-header {
+  background: url("~images/menu-no-select.png~") no-repeat center;
+  background-size: 94%;
+  background-position-y: -2px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+menu .sidenav li.active .collapsible-header {
+  background: url("~images/menu-selected.png~") no-repeat center;
+  background-size: 94%;
+  background-position-y: -2px;
+  transition: 0.3s;
+}
+menu .sidenav .collapsible-body, menu .sidenav .fixed .collapsible-body {
+  background-color: transparent;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: -15px;
+}
+menu .sidenav .collapsible-body li a, menu .sidenav .fixed .collapsible-body li a {
+  background-color: rgba(1, 166, 255, 0.4);
+  padding: 0;
+}
+menu .sidenav .collapsible-body li a:hover, menu .sidenav .fixed .collapsible-body li a:hover {
+  background-color: rgba(1, 166, 255, 0.6);
+  transition: 0.3s;
+}
+menu .sidenav .collapsible-body li .active, menu .sidenav .fixed .collapsible-body li .active {
+  background-color: rgba(1, 166, 255, 0.7) !important;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=style.css.map */

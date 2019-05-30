@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/app/scripts/frame/routes.js" />
+        <item url="file://$PROJECT_DIR$/app/scripts/frame/src/controllers/live-main-controller.js" />
+        <item url="file://$PROJECT_DIR$/app/scripts/frame/src/controllers/login-controller.js" />
+        <item url="file://$PROJECT_DIR$/app/scripts/frame/src/main.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/scripts/frame/routes.js" />
+      <root url="file://$PROJECT_DIR$/app/scripts/frame/src/controllers/live-main-controller.js" />
+      <root url="file://$PROJECT_DIR$/app/scripts/frame/src/controllers/login-controller.js" />
+      <root url="file://$PROJECT_DIR$/app/scripts/frame/src/main.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

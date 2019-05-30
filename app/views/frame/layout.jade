@@ -1,0 +1,38 @@
+﻿//-
+//-   User: Dow
+//-   Date: 15/02/04
+doctype html
+html(lang='en', ng-controller='LiveMainController as mvm')
+    head
+        meta(charset='utf-8')
+        meta(name='author', content='Dow')
+        meta(name='keywords', content='clc frame')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        //-base(href='/')
+        block title
+            title(ng-bind='$root.title + " " + mvm.setting.title')
+        block styles
+            link(type='text/css', rel='stylesheet', href='/lib/highlightjs/styles/default.css')
+            link(type='text/css', rel='stylesheet', href='/lib/materialize-css/dist/css/materialize.min.css')
+            link(type='text/css', rel='stylesheet', href='/lib/webui-popover/dist/jquery.webui-popover.min.css')
+
+            link(type='text/css', rel='stylesheet', href='/style/frame/site.css')
+            link(type='text/css', rel='stylesheet', href='/style/frame/classic.css')
+            link(type='text/css', rel='stylesheet', href='/style/frame/frame.css')
+    body
+        block header
+            include header
+        block menu
+            include menu
+        main(style="height:90%;margin-top: 64px;z-index: auto;",ng-class="mvm.flag ? 'main-2': 'main-1'",ng-style="{'padding-left': ($root.project? '':'0px')}")
+            block content
+                loading-spinner(ng-show='$root.loading')
+
+                #container(ng-view)
+
+        block footer
+            include footer
+        block scripts
+            script(type='text/javascript', src='/lib/clc.foundation.angular/src/requirejs-config.js')
+            script(src='/lib/requirejs/require.js', data-main='/scripts/frame/main')
+

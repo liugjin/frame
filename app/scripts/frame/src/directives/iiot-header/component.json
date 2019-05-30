@@ -1,0 +1,28 @@
+{
+  "id": "iiot-header",
+  "name": "IiotHeader控件",
+  "type": "IiotHeaderDirective",
+  "desc": {
+    "author":"Billy",
+    "desc":"框架头部，包含告警信息",
+    "version":{
+      "0.0.1":[
+        "集成告警"
+      ],
+      "0.0.2":[
+        "修复标题显示错误"
+      ],
+      "0.0.3":[
+        "通过基本信息设备配置"
+      ]
+    }
+  },
+  "group": "功能组件",
+  "parameters": [],
+  "interact": {
+    "pubs": [],
+    "subs": []
+  },
+  "css": "",
+  "version": "0.0.3"
+}

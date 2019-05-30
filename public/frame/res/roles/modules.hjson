@@ -1,0 +1,43 @@
+{
+    id: "features"
+    name: "应用模块"
+    modules: [
+        #{module: "projects", name: "选择项目"}
+        #{module: "main", name: "首页概览"}
+        #{module: "changan-car", name: "长安项目", parent: "main"}
+        #{module: "indust-main", name: "地理概况", parent: "main"}
+        {module: "device-monitoring", name: "设备监控"}
+        {module: "station-visualization", name: "管网图", parent: "device-monitoring"}
+        #{module: "realtime-monitoring", name: "实时监测", parent: "device-monitoring"}
+        #{module: "signal-contrast", name: "信号对比", parent: "device-monitoring"}
+        #{module: "event-manager", name: "告警管理", parent: "device-monitoring"}
+        {module: "alarmcenter", name: "告警中心"}
+        {module: "push", name: "告警方式", parent: "alarmcenter"}
+        {module: "reporting-alarm", name: "告警报表", parent: "alarmcenter"}
+        #{module: "link", name: "告警联动", parent: "alarmcenter"}
+        {module: "operationcenter", name: "运维中心"}
+        {module: "inventory-manager", name: "资产管理", parent: "operationcenter"}
+        {module: "reportingmodule", name: "数据查询"}
+        #{module: "reporting-sigstatistic", name: "信号报表", parent: "reportingmodule"}
+        {module: "reporting-equipments", name: "资产报表", parent: "reportingmodule"}
+        {module: "reporting-energystatistic", name: "用电报表", parent: "reportingmodule"}
+        {module: "report-historysignal", name: "历史数据", parent: "reportingmodule"}
+        {module: "report-staticsignal", name: "信号统计", parent: "reportingmodule"}
+        {module: "report-state", name: "设备通讯", parent: "reportingmodule"}
+        {module: "report-alarmstatistic", name: "告警分类", parent: "reportingmodule"}
+        {module: "event-manager", name: "告警汇总", parent: "reportingmodule"}
+        {module: "energy-analysis", name: "用电统计", parent: "reportingmodule"}
+        {module: "report-operrecords", name: "系统日志", parent: "reportingmodule"}
+        {module: "report-commandrecs", name: "操作日志", parent: "reportingmodule"}
+        #{module: "reporting-runingratio", name: "设备开动率", parent: "reportingmodule"}
+        #{module: "report-runningstatus", name: "开关机报表", parent: "reportingmodule"}
+        {module: "systemsetting", name: "系统设置"}
+        {module: "notice-edit", name: "公告栏维护", parent: "systemsetting"}
+        {module: "setting", name: "系统信息", parent: "systemsetting"}
+        {module: "userinfo", name: "用户信息", parent: "systemsetting"}
+        {module: "authority", name: "权限管理", parent: "systemsetting"}
+        {module: "station-manager", name: "站点管理", parent: "systemsetting"}
+        #{module: "mobile", name: "移动端"}
+    ]
+}
+    

@@ -1,0 +1,36 @@
+{
+    title: "frame"
+    name: "frame"
+    desc: "frame"
+
+    toastTime: 2000
+    pollingPeriod: 15000
+
+    # api routes
+    keyword: "frame"
+    namespace: "frame"
+    api: "clc/api/v1"
+    authUrls: {
+        login: "/auth/login"
+        logout: "/auth/logout"
+        register: "/auth/register"
+        changePassword: "/auth/changepassword"
+        forgetPassword: "/auth/forgetpassword"
+        users: "/auth/users"
+        sendSmsCode: "/auth/sendsmscode"
+        loginBySmsCode: "/auth/loginbysmscode"
+        changeToken: "/auth/changetoken"
+    }
+    menus: [
+        {
+            icon: "res/svg/home.svg",
+            title: "首页",
+            moduleid:"functions",
+            url: "#/frame"
+            submenus: [
+                {"icon": "res/svg/setting.svg","title": "子页","moduleid": "report-asset-search","url": ""}
+            ]
+        }
+    ]
+
+}

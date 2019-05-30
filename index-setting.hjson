@@ -1,0 +1,100 @@
+{
+    # service id
+    id: "frame"
+
+    # mqtt connection
+    mqtt: {
+        url: "mqtt://localhost:1883"
+#        url: "mqtt://clcdata.com:1883"
+
+        options: {
+          qos: 0,
+          retain: true,
+          # offline message cache in nedb
+#          store: "nedb"
+        }
+
+    }
+
+    # web
+    web: {
+        address: "0.0.0.0"
+        port: 9658
+
+        env: "development"
+
+        # allow cross domain access, move to nginx setting
+        crossdomain: false
+
+        # body parser limit size
+        limit: '500mb'
+        # session secret
+        secret: 'pu'
+        # 7 * 24 * 60 * 60 * 1000
+        maxAge: 604800000
+
+        # express static urls
+        urls: {
+            views: "./app/views"
+            favicon: "./public/favicon.ico"
+            static: "./public"
+            style: "./app/styles"
+            scripts: "./app/scripts"
+            lib: "../clc.share/lib"
+            upload: "../clc.share/upload"
+            userImage: "../clc.share/upload/img/users"
+        }
+
+        # http schema should be http or https
+        httpSchema: "http"
+    }
+
+    # urls
+    routes: {
+        login: "http://localhost:7200/login"
+
+        # this may change sub-project namespace
+        #    namespace: "frame"
+        api: "clc/api/v1"
+    }
+
+    # daemon service
+    daemon: {
+        id: "daemon-frame"
+        # 15 minutes
+        heartbeat: 900000
+        domain: "sample-values"
+        monitoringUnit: "daemon-unit"
+        sampleUnit: "frame-services"
+        channel: "frame"
+        value: {
+            url: "http://localhost/frame"
+        }
+    }
+
+    # options
+    options: {
+        logFile: "/log/frame.log"
+
+        # encrypt password or not, required by default. this is used for system running on embedded
+        simplePassword: false
+    }
+
+    # register
+    register: {
+        topic: "gateway/register"
+        throttle: 1000
+
+        frame: {
+            id: "register-frame"
+            filename: "./app/scripts/frame/setting.json"
+        }
+    }
+
+    services: {
+        auth: {
+          # should sync to clc.model config
+          token: "fa5d09d0-af61-11e8-acd7-937b5970daac"
+        }
+    }
+}

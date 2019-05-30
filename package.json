@@ -1,0 +1,28 @@
+{
+  "name": "clc.frame",
+  "version": "0.0.3",
+  "description": "clc frame",
+  "predictiveor": "Dow <dow@clcdata.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://clc-dow@bitbucket.org/clc-dow/clc.frame.git"
+  },
+  "keywords": [
+    "frame"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "http://dev.clcdata.com:4873/"
+  },
+  "private": false,
+  "dependencies": {
+    "amdefine": "^1.0.1",
+    "clc.foundation": "*",
+    "clc.foundation.web": "*",
+    "iced-coffee-script": "^108.0.11"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
+  }
+}
